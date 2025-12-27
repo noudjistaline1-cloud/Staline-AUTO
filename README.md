@@ -1,0 +1,147 @@
+==========================================================
+#  STALINE PRO MAX AUTO v30 - AUTO SETTINGS FILE
+#  Version : 30.0 (Pipeline Ultra-Fusion)
+#  Mode : 100% Automatique
+#  Description :
+#    Fichier de configuration distant pour les modules :
+#    Pipeline v30, SLE, DSF, ATR, SMA, EMA MTF, Correlation,
+#    Carry, Crypto, Risk Shifting, AutoGrid, Memory, News.
+#    Compatible backtest & réel.
+#    Optimisé pour rendement élevé, risque contrôlé, et
+#    mise à jour automatique via HTTPS (SafeWebRequest).
+==========================================================
+
+# === PARAMÈTRES GÉNÉRAUX ===
+EnableLogging=1
+EnableDashboard=1
+BaseRiskPerTradePercent=0.20
+MaxDailyLossPercent=10.0
+MinEquityForTrading=50.0
+ScalingTranches=2
+MinLot=0.01
+MaxOpenPositions=3
+CooldownBetweenTradesS=5
+
+# === TEMPS DE TRADING ===
+TradeStartHour=1
+TradeEndHour=22
+
+# === INDICATEURS TECHNIQUES ===
+ATR_Period=14
+ATRMeanPeriodsForAvg=10
+ATRVolatilityMultiplier=1.5
+ADXPeriod=14
+MinSLMovePoints=5
+
+EMA_TF1=PERIOD_M15
+EMA_TF2=PERIOD_H1
+EMA_TF3=PERIOD_H4
+
+UseSMAFilter=1
+SMA_Period=50
+SMA_TF=PERIOD_CURRENT
+
+# === PARAMÈTRES STRATÉGIE ADAPTATIVE (SLE / DSF) ===
+SLE_GatingThreshold=0.70
+PatternMinSuccessRate=0.45
+PatternMinSamples=30
+DSF_RoG_ActivationPercent=55.0
+DSF_MaxAmplification=1.35
+DSF_BoostIfGainPercent=70.0
+
+AdaptiveProfileFile=adaptive_profile_v28.csv
+
+# === PARAMÈTRES DE SÉCURITÉ ===
+MaxAllowedSlippagePoints=10.0
+MaxSpreadPoints=40.0
+RetryCount=2
+RetrySleepMs=200
+
+# === NEWS FILTER (ÉVÉNEMENTS) ===
+UseNewsFilter=1
+NewsFileName=economic_calendar.csv
+NewsWebURL=
+UseWebRequestForNews=1
+NewsFilterMins=30
+
+# === MISE À JOUR AUTOMATIQUE (.SET) ===
+SettingsFileName=StalinePRO_Settings.set
+SettingsWebURL=
+SettingsMaxAgeHours=24
+
+# === AUTO-CALIBRATION & RECOVERY ===
+RecoveryDrawdownPercent=12.0
+RecoveryPauseHours=4
+AutoCalibrationPeriodHours=24
+
+# === AUTO-LOT BALANCER ===
+AutoLotWinIncreaseFactor=1.10
+AutoLotLossDecreaseFactor=0.80
+
+# === CORRÉLATION ===
+HighCorrelationThreshold=0.70
+CorrelationPenaltyFactor=0.02
+CorrelationLookbackBars=50
+
+# === CARRY (SWAP SENTIMENT) ===
+UseCarrySentimentBoost=1
+CarryPositiveBoost=0.02
+CarryNegativeMalus=0.02
+
+# === PROTECTION PAR SYMBOLE ===
+PerTradeLossPercentToDisableSymbol=3.0
+SymbolBlockHoursOnFailure=4
+
+# === DECISION MATRIX ===
+DecisionMinFiltersToTrade=3
+
+# === MISC ===
+MaxHistoryDealsToScan=1000
+MaxInactivityHours=12
+EnableAntiOverfiltering=1
+g_memoryFile=staline_memory_v28.dat
+
+UseDailyEmailReport=1
+DailyReportHourServer=2
+DailyReportMinuteServer=0
+ReportRecipient=you@example.com
+
+# === RISK SHIFTING (V14) ===
+BaseCapitalReference=200.0
+
+# === AUTO-GRID DEFENSE ===
+EnableAutoGridDefense=1
+AutoGridMaxExtraLotsPct=5.0
+
+# === PIPELINE v30 ===
+UsePipelineEdition=1
+Pipeline_TradeStartHour=0
+Pipeline_TradeEndHour=23
+Pipeline_MinEquity=50.0
+Pipeline_DailyLossCapPct=8.0
+Pipeline_RetryCount=2
+Pipeline_RetrySleepMs=250
+Pipeline_ScalingTranches=2
+
+# === SENTIMENT EXTERNE / ML ===
+UseExternalSentiment=1
+ExternalSentimentURL=
+ExternalSentimentTimeoutMs=3000
+UseMLSentiment=1
+InternalWRWeight=0.40
+ExternalWeight=0.35
+MLWeight=0.25
+
+# === CRYPTO TRADING ===
+EnableCryptoTrading=1
+CryptoSymbolsCSV=BTCUSD,ETHUSD,XRPUSD
+MaxCryptoSpreadPoints=120.0
+MaxCryptoPositionsPerSym=3
+CryptoRiskFactor=1.2
+
+==========================================================
+#  Fin du fichier - Staline PRO Max Auto v30
+#  Auteur : SCOTH
+#  Domaine autorisé : raw.githubusercontent.com / ton-site.com
+#  Généré par : GPT-5 Secure MT5 Configurator
+==========================================================
