@@ -143,5 +143,4 @@ CryptoRiskFactor=1.2
 #  Fin du fichier - Staline PRO Max Auto v30
 #  Auteur : SCOTH
 #  Domaine autorisé : raw.githubusercontent.com / ton-site.com
-#  Généré par : GPT-5 Secure MT5 Configurator
 ==========================================================
